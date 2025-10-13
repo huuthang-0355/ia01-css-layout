@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dealers - Amazing Deal</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            /* CSS tùy chỉnh */
+            .font-dancing-script {
+                font-family: "Dancing Script", cursive;
+            }
+            body {
+                font-family: "Roboto", sans-serif;
+                background-color: #f3f4f6;
+            }
+            .airmail-border {
+                position: relative;
+                padding-top: 1.25rem;
+            }
+            .airmail-border::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 8px;
+                background-image: repeating-linear-gradient(
+                    -45deg,
+                    #ef4444,
+                    #ef4444 10px,
+                    #3b82f6 10px,
+                    #3b82f6 20px
+                );
+                border-top-left-radius: 0.375rem;
+                border-top-right-radius: 0.375rem;
+            }
+
+            /* Loại bỏ hiệu ứng ticket và chỉ giữ lại một box trắng đơn giản */
+            .info-box {
+                background: white;
+                border: 1px solid #e5e7eb; /* Thêm border mảnh */
+                border-radius: 0.375rem; /* bo góc */
+            }
+
+            /* Style cho nút Buy Deal */
+            .buy-deal-button {
+                background: linear-gradient(to bottom, #86efac, #22c55e);
+                color: white;
+                font-weight: bold;
+                font-size: 1.5rem; /* text-2xl */
+                padding: 0.75rem 1.25rem; /* py-3 px-5 */
+                border-radius: 0.5rem; /* rounded-lg */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.2s ease-in-out;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            .buy-deal-button:hover {
+                background: linear-gradient(to bottom, #a7f3d0, #4ade80);
+            }
+
+            /* Style cho nút social */
+            .social-button {
+                display: inline-flex;
+                align-items: center;
+                padding: 0.5rem 0.75rem;
+                border-radius: 0.25rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: white;
+            }
+            .social-button.twitter {
+                background-color: #55acee;
+            }
+            .social-button.facebook {
+                background-color: #3b5998;
+            }
+            .social-button span {
+                margin-left: 0.375rem;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100">
+        <div class="container mx-auto max-w-5xl p-4">
+            <header class="py-4">
+                <div
+                    class="flex flex-col md:flex-row justify-between md:items-start gap-6"
+                >
+                    <div
+                        class="flex flex-col items-center md:items-start gap-4"
+                    >
+                        <h1 class="font-dancing-script text-5xl text-slate-800">
+                            Dealers
+                        </h1>
+                        <nav>
+                            <ul
+                                class="flex items-center divide-x divide-gray-300 text-gray-600"
+                            >
+                                <li class="pr-3">
+                                    <a
+                                        href="#"
+                                        class="hover:text-gray-900 font-semibold"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="px-3">
+                                    <a
+                                        href="#"
+                                        class="hover:text-gray-900 font-semibold"
+                                        >About</a
+                                    >
+                                </li>
+                                <li class="px-3">
+                                    <a
+                                        href="#"
+                                        class="hover:text-gray-900 font-semibold"
+                                        >All Deals</a
+                                    >
+                                </li>
+                                <li class="px-3">
+                                    <a
+                                        href="#"
+                                        class="hover:text-gray-900 font-semibold"
+                                        >Submit Your Deal</a
+                                    >
+                                </li>
+                                <li class="pl-3">
+                                    <a
+                                        href="#"
+                                        class="hover:text-gray-900 text-lg"
+                                        >✉️</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div
+                        class="airmail-border bg-white px-4 py-6 rounded-md shadow-sm w-full md:w-auto md:max-w-md"
+                    >
+                        <div class="text-center md:text-left">
+                            <p
+                                class="text-base font-semibold text-gray-700 mb-2"
+                            >
+                                Sign up for free to get deals directly to your
+                                mailbox
+                            </p>
+                            <form action="#" class="flex space-x-2">
+                                <input
+                                    type="email"
+                                    placeholder="Enter Your E-mail Address"
+                                    class="border border-gray-300 px-3 py-1.5 text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                                />
+                                <button
+                                    type="submit"
+                                    class="bg-slate-500 text-white px-4 py-1.5 text-sm rounded-md hover:bg-slate-600 whitespace-nowrap"
+                                >
+                                    Subscribe Me
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="bg-white p-6 md:p-8 rounded-lg shadow-md mt-6">
+                <section>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-8">
+                            <h2
+                                class="text-2xl font-semibold text-gray-800 mb-4"
+                            >
+                                This is one very amazing deal
+                            </h2>
+                            <div
+                                class="bg-red-500 w-full h-64 md:h-80 rounded"
+                            ></div>
+                            <p class="text-gray-600 mt-4 leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col">
+                            <div
+                                class="info-box p-6 flex-grow flex flex-col space-y-6"
+                            >
+                                <div class="text-center">
+                                    <p class="text-base text-gray-500">
+                                        This deal will end in:
+                                    </p>
+                                    <p class="text-xl font-bold text-gray-800">
+                                        6 days 1 hrs 52 min 51 sec
+                                    </p>
+                                </div>
+
+                                <div class="text-center">
+                                    <p class="text-base text-gray-500">
+                                        Discount
+                                    </p>
+                                    <p
+                                        class="text-7xl font-bold text-red-500 leading-none"
+                                    >
+                                        43%
+                                    </p>
+                                    <div
+                                        class="mt-4 text-base flex justify-center space-x-8"
+                                    >
+                                        <div>
+                                            <p class="text-gray-500">
+                                                Deal Value
+                                            </p>
+                                            <p class="font-bold text-gray-800">
+                                                $47
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-500">
+                                                You Save
+                                            </p>
+                                            <p class="font-bold text-gray-800">
+                                                $20
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-center space-x-2">
+                                    <a href="#" class="social-button twitter">
+                                        <svg
+                                            class="h-4 w-4"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.222 8.222 0 01-2.607.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 014 9.77c-.007.042-.007.084-.007.126a4.106 4.106 0 003.388 4.092 4.097 4.097 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.205 8.205 0 013 18.348a8.083 8.083 0 004.584 1.352z"
+                                            ></path>
+                                        </svg>
+                                        <span>Tweet 9</span>
+                                    </a>
+                                    <a href="#" class="social-button facebook">
+                                        <svg
+                                            class="h-4 w-4"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.248 0-1.647.779-1.647 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z"
+                                            ></path>
+                                        </svg>
+                                        <span>Like 5</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a href="#" class="mt-4 buy-deal-button">
+                                Buy this deal - 27$
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="my-8 py-6 border-y border-gray-200">
+                    <div
+                        class="flex flex-wrap justify-around items-center gap-8"
+                    >
+                        <span class="font-dancing-script text-3xl text-gray-400"
+                            >Dealers</span
+                        >
+                        <span class="font-bold text-2xl uppercase text-gray-400"
+                            >Themes Kingdom</span
+                        >
+                        <span class="font-bold text-2xl text-gray-400"
+                            >Doves<span class="text-blue-400">Medic</span></span
+                        >
+                        <span class="font-bold text-2xl uppercase text-gray-400"
+                            >Themes Kingdom</span
+                        >
+                        <span class="font-dancing-script text-4xl text-gray-400"
+                            >sm</span
+                        >
+                    </div>
+                </section>
+
+                <section>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="border border-dashed border-gray-300 p-4">
+                            <h3 class="font-semibold text-gray-800 mb-3">
+                                Lorem Ipsum Dolor Deal
+                            </h3>
+                            <div
+                                class="border rounded-md shadow-lg overflow-hidden"
+                            >
+                                <div class="bg-red-500 w-full h-32"></div>
+                                <div
+                                    class="flex justify-around text-xs text-center text-gray-600 divide-x divide-dashed divide-gray-300 bg-white p-3"
+                                >
+                                    <span
+                                        >Deal Value<br /><strong
+                                            class="text-gray-800"
+                                            >$47</strong
+                                        ></span
+                                    >
+                                    <span
+                                        >Discount<br /><strong
+                                            class="text-gray-800"
+                                            >43%</strong
+                                        ></span
+                                    >
+                                    <span
+                                        >You Save<br /><strong
+                                            class="text-gray-800"
+                                            >$20</strong
+                                        ></span
+                                    >
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-xs text-gray-500">
+                                    71d 23h 38m 36s
+                                </p>
+                                <a
+                                    href="#"
+                                    class="text-sm bg-gradient-to-b from-lime-400 to-green-500 text-white py-1 px-3 rounded-md hover:from-lime-500 hover:to-green-600 font-semibold shadow"
+                                    >SEE DEAL</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="border border-dashed border-gray-300 p-4">
+                            <h3 class="font-semibold text-gray-800 mb-3">
+                                Lorem Ipsum Dolor Deal
+                            </h3>
+                            <div
+                                class="border rounded-md shadow-lg overflow-hidden"
+                            >
+                                <div class="bg-red-500 w-full h-32"></div>
+                                <div
+                                    class="flex justify-around text-xs text-center text-gray-600 divide-x divide-dashed divide-gray-300 bg-white p-3"
+                                >
+                                    <span
+                                        >Deal Value<br /><strong
+                                            class="text-gray-800"
+                                            >$47</strong
+                                        ></span
+                                    >
+                                    <span
+                                        >Discount<br /><strong
+                                            class="text-gray-800"
+                                            >43%</strong
+                                        ></span
+                                    >
+                                    <span
+                                        >You Save<br /><strong
+                                            class="text-gray-800"
+                                            >$20</strong
+                                        ></span
+                                    >
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-xs text-gray-500">
+                                    71d 23h 38m 36s
+                                </p>
+                                <a
+                                    href="#"
+                                    class="text-sm bg-gradient-to-b from-lime-400 to-green-500 text-white py-1 px-3 rounded-md hover:from-lime-500 hover:to-green-600 font-semibold shadow"
+                                    >SEE DEAL</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="border border-dashed border-gray-300 p-4">
+                            <h3 class="font-semibold text-gray-800 mb-3">
+                                Lorem Ipsum Dolor Deal
+                            </h3>
+                            <div
+                                class="border rounded-md shadow-lg overflow-hidden"
+                            >
+                                <div class="bg-red-500 w-full h-32"></div>
+                                <div
+                                    class="flex justify-around text-xs text-center text-gray-600 divide-x divide-dashed divide-gray-300 bg-white p-3"
+                                >
+                                    <span
+                                        >Deal Value<br /><strong
+                                            class="text-gray-800"
+                                            >$47</strong
+                                        ></span
+                                    >
+                                    <span
+                                        >Discount<br /><strong
+                                            class="text-gray-800"
+                                            >43%</strong
+                                        ></span
+                                    >
+                                    <span
+                                        >You Save<br /><strong
+                                            class="text-gray-800"
+                                            >$20</strong
+                                        ></span
+                                    >
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-xs text-gray-500">
+                                    71d 23h 38m 36s
+                                </p>
+                                <a
+                                    href="#"
+                                    class="text-sm bg-gradient-to-b from-lime-400 to-green-500 text-white py-1 px-3 rounded-md hover:from-lime-500 hover:to-green-600 font-semibold shadow"
+                                    >SEE DEAL</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="border border-dashed border-gray-300 p-4">
+                            <h4 class="font-bold text-gray-800 mb-3">
+                                About Our Deals
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud.
+                            </p>
+                        </div>
+                        <div class="border border-dashed border-gray-300 p-4">
+                            <h4 class="font-bold text-gray-800 mb-3">
+                                Twitter Buzz
+                            </h4>
+                            <ul class="space-y-4 text-sm">
+                                <li class="text-gray-600 leading-relaxed">
+                                    7 Photoshop tips for designing clean and
+                                    modern websites
+                                    <a href="#" class="text-blue-500"
+                                        >su.pr/1ruOpp</a
+                                    ><br /><span
+                                        class="mt-1 inline-block bg-gray-200 rounded px-2 py-0.5 text-xs text-gray-500"
+                                        >1Day Ago</span
+                                    >
+                                </li>
+                                <li class="text-gray-600 leading-relaxed">
+                                    7 Photoshop tips for designing clean and
+                                    modern websites
+                                    <a href="#" class="text-blue-500"
+                                        >su.pr/1ruOpp</a
+                                    ><br /><span
+                                        class="mt-1 inline-block bg-gray-200 rounded px-2 py-0.5 text-xs text-gray-500"
+                                        >1Day Ago</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="border border-dashed border-gray-300 p-4">
+                            <h4 class="font-bold text-gray-800 mb-3">
+                                Other Pages
+                            </h4>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li>
+                                    <a href="#" class="hover:underline">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline"
+                                        >About Our Deals</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline"
+                                        >All Deals</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline"
+                                        >Contact</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="text-center text-xs text-gray-500 py-6">
+                <p>
+                    Copyright Information Goes Here 2012. All Rights Reserved.
+                </p>
+                <p>
+                    Designed By:
+                    <a href="#" class="text-blue-500">Themes Kingdom</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
