@@ -9,4 +9,13 @@ node {
   stage('Test') {
     echo 'Testing...'
   }
+
+  stage('Test-02') {
+    echo 'Testing second...'
+  }
+  
+  stage('deploy') {
+    echo 'Deploying...'
+  }
+
 }
