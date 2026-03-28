@@ -1,21 +1,13 @@
-node {
-  checkout scm
-
-  stage('Build') {
-    echo 'Building...'
+pipeline {
+  agent any
+  stages {
+    stage('Building...') {
+      steps {
+        nodejs('Node') {
+          echo 'Building application...'
+          sh 'npm install'
+        }
+      }
+    }
   }
-
-  
-  stage('Test') {
-    echo 'Testing...'
-  }
-
-  stage('Test-02') {
-    echo 'Testing second...'
-  }
-  
-  stage('deploy') {
-    echo 'Deploying...'
-  }
-
 }
