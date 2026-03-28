@@ -1,13 +1,10 @@
 pipeline {
   agent any
-  triggers {
-    cron '* * * * *'
-  }
-
   stages {
     stage('build') {
       steps {
-         echo 'Building...' 
+        echo 'Building...' 
+        sh './hello.sh'
       }
        
     }
