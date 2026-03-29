@@ -8,6 +8,11 @@ pipeline {
     }
 
     stage('build') {
+
+      when {
+        changeset '**/*.sh'
+      }
+      
       steps {
         echo 'Building...'
       }
