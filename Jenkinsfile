@@ -8,8 +8,10 @@ pipeline {
     }
 
     stage('dir') {
-      dir('my-dir') {
-        sh 'cat output.txt'
+      steps {
+        dir('my-dir') {
+          sh 'cat output.txt'
+        }  
       }
     }
   }
