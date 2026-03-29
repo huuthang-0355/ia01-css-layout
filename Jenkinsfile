@@ -1,26 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('test') {
+    stage('full-path') {
       steps {
-        echo 'Testing...' 
+        sh 'cat my-dir/output.txt'
       }
     }
 
-    stage('build') {
-
-      when {
-        changeset '**/*.sh'
-      }
-      
-      steps {
-        echo 'Building...'
-      }
-    }
-
-     stage('deploy') {
-      steps {
-        echo 'Deploying...'
+    stage('dir') {
+      dir('my-dir') {
+        sh 'cat output.txt'
       }
     }
   }
