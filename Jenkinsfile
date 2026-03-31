@@ -10,4 +10,5 @@ pipeline {
         echo 'hELLO wOrlD'
       }
     }
+  }
 }
