@@ -1,13 +1,12 @@
 pipeline {
   agent any
+  options {
+    skipDefaultCheckout true
+  }
   stages {
     stage('hello') {
-      when {
-        branch 'main'
-      }
-
       steps {
-        echo 'hELLO wOrlD'
+        sh 'cat test.txt'
       }
     }
   }
