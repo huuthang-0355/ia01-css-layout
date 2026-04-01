@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label "for-testing"
+  }
 
   parameters {
     string(name: 'BRANCH', defaultValue: 'main', description: 'Git branch to build')
